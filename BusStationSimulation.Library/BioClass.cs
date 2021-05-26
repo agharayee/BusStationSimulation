@@ -8,8 +8,8 @@ namespace BusStationSimulation.Library
 {
     public class BioClass
     {
-        public string Name;
-        public string PhoneNumber;
-        public string NextOfKin;
+        protected internal string Name;
+        protected internal string PhoneNumber;
+        protected internal string NextOfKin;
     }
 }

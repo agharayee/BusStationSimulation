@@ -24,7 +24,7 @@ namespace BusStationSimulation.Library
 
         public void Departure()
         {
-            Console.WriteLine("We have started Moving have a wonderful Ride");
+            Console.WriteLine($"Good day ladies and gents. I am the captain for today's journing. We are starting our journing at {DateTime.Now} we should arrive at {DateTime.Now.AddHours(4).AddMinutes(30)}");
         }
     }
 }

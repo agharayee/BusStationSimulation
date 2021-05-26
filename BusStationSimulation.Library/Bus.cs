@@ -20,18 +20,7 @@ namespace BusStationSimulation.Library
         }
 
 
-        //Before Entering the Bus your tickect has to be verified
-        public void GetDriver()
-        {
-
-        }
-
-        //public void BoardBus(Tickets ticket)
-        //{
-        //    Passenger passenger = new Passenger(Name, PhoneNumber, Destination, NextOfKin);
-        //    passenger.GetTicket();
-
-        //}
+        
 
 
     }

@@ -7,7 +7,7 @@ namespace BusStationSimulation
     {
         static void Main(string[] args)
         {
-            
+            Driver driver = new Driver();
             Console.WriteLine("Please Enter your name");
             var name = Console.ReadLine();
             Console.WriteLine("Please Enter your Phone Number");
@@ -22,6 +22,9 @@ namespace BusStationSimulation
             passenger.GetTicket();
             Console.WriteLine();
             passenger.MethodCaller();
+            var seat = passenger.SeatNumber;
+            Console.WriteLine(seat);
+            driver.Departure();
         }
     }
 }

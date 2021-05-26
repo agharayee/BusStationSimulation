@@ -8,20 +8,15 @@ namespace BusStationSimulation.Library
 {
     public class Ticketer
     {
-        private string Id { get; set; }
+        private string referenceNumber { get; set; }
         private string ticketerName { get; set; } = "Emmanuel";
 
-        public Tickets IssueTicket(Passenger passenger)
-        {
-            var tickets = TicketIssuer(passenger);
-            return tickets;
-        }
-        private Tickets TicketIssuer(Passenger passenger)
+        internal Tickets TicketIssuer(Passenger passenger)
         {
             Bus bus = new Bus();
             Tickets tickets = new Tickets
             {
-                Id = Guid.NewGuid(),
+                ReferenceNumber = Guid.NewGuid(),
                 Name = passenger.Name,
                 issuedBy = ticketerName,
                 PhoneNumber = passenger.PhoneNumber,
@@ -30,13 +25,13 @@ namespace BusStationSimulation.Library
                 NextOfKin = passenger.NextOfKin,
                 Amount = 10000,
                 BusPlateNumber = bus.GetBusNumber,
-                SeatNumber = 18,
+                SeatNumber = passenger.SeatNumber,
 
             };
             return tickets;
         }
 
-        private List<Tickets> IssueTicket(List<Passenger> passengers)
+        internal List<Tickets> IssueTicket(List<Passenger> passengers)
         {
             Bus bus = new Bus();
             List<Tickets> multipleTickets = new List<Tickets>();
@@ -46,7 +41,7 @@ namespace BusStationSimulation.Library
                 Tickets tickets = new Tickets
                 {
 
-                    Id = Guid.NewGuid(),
+                    ReferenceNumber = Guid.NewGuid(),
                     Name = ticket.Name,
                     issuedBy = ticketerName,
                     PhoneNumber = ticket.PhoneNumber,
